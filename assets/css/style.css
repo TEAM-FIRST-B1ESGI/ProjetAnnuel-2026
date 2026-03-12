@@ -1,13 +1,43 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F2F2F2;
 }
+
+/*----------------COULEURS------------------/*
+#514BF2 bleu roi
+#35328C bleu foncé
+#181740 bleu marine
+#F2F2F2 grey
+#CEF2DE vert pâle
 
 /*----------------BLOC HEADER---------------*/
 .header {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .item-revenu {
-    width: 100px;
+    width: 200px;    
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.btn-modifier {    
+    width: 80px;
+    padding: 5px;
+    border: none;    
+    border-radius: 5px;
+    color: white;
+    background-color: #514BF2;
+}
+
+.montant {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
