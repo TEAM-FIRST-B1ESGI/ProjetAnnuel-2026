@@ -27,14 +27,30 @@
 
     <!--------Bloc point dépense---------->
     <section>
-        <div class="bloc-repartion-depenses"></div>
-        <div class="bloc-alertes"></div>
+        <div class="bloc-repartion-depenses">
+            <div>Reste à vivre<div>
+            <div>Total dépenses<div>
+            <div>répartition</div>
+        </div>
+        <div class="bloc-alertes">Alertes</div>
+    <!--------Bloc fonctionnalité épargne restante---------->
     </section>
 
-    <!--------Bloc fonctionnalité épargne restante---------->
-
     <!--------Bloc intéractif décla dépenses---------->
+    <section>
+        <h2>Déclarer une dépense</h2>
+        <p>Utilise ce formulaire pour ajouter une nouvelle transcation. Toutes les valeurs sont calculées après validation</p>
+        <div class="calculateur">
+            <div>date</div>
+            <div>montant</div>
+            <div>catégorie</div>
+            <div>valider et calculer</div>
+        </div>
+    </section>
 
     <!--------Bloc historique---------->
+    <section>
+        <h2>Historique des dépenses</h2>
+    </section>
 </body>
 </html>
