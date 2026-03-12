@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------BLOC HEADER---------------*/
+.header {
+    width: 100%;
+}
+
 .item-revenu {
     width: 100px;
 }

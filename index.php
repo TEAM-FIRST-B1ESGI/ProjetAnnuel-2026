@@ -6,17 +6,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Titre de la page</title>
 </head>
 <body>
     <!--------Bloc nav---------->
-    <img src="assets/img/logo.png"
-    <h1>Titre principal</h1>
-    
-    <div class="item-revenu"><p>MON REVENU (€)</p>
-        <div>btn-modifier</div>
+    <div class="header">
+        <img class="logo" src="assets/img/logo.png"    
+        <div class="item-revenu">
+            <p>MON REVENU (€)</p>
+            <button>Modifier</button>
+        </div>
     </div>
+
+
     <!--------Bloc point dépense---------->
 
     <!--------Bloc fonctionnalité épargne restante---------->
