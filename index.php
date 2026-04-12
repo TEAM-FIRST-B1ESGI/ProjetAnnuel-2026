@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<!-----Notification de connexion popup-------->
+<!-----Logout ?------->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +35,6 @@
             </div>
         </div>
     </div>
-
 
     <!--------Bloc point dépense---------->
     <section>
