@@ -15,9 +15,9 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="assets/css/style.css">-->
-    <link rel="stylesheet" href="assets/css/style.css?php echo time(); ?>">
-    <title>Titre de la page</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=<?= time(); ?>">
+    
+    <title>Accueil</title>
 </head>
 <body>
     <!--------Bloc nav---------->
@@ -31,7 +31,7 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="affichage-montant">
                     2005,00
                 </div>
-                <button class="btn-modifier">Modifier</button>
+                <button class="btn-modifier" id="btnModifier">Modifier</button>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="bloc-repartion-depenses">
             <div>Reste à vivre<div>
             <div>Total dépenses<div>
-            <div>répartition</div>
+            <div>Répartition</div>
         </div>
         <div class="bloc-alertes">Alertes</div>
     <!--------Bloc fonctionnalité épargne restante---------->
@@ -50,7 +50,7 @@ if (!isset($_SESSION['user_id'])) {
     <!--------Bloc intéractif décla dépenses---------->
     <section>
         <h2>Déclarer une dépense</h2>
-        <p>Utilise ce formulaire pour ajouter une nouvelle transcation. Toutes les valeurs sont calculées après validation</p>
+        <p>Utilise ce formulaire pour ajouter une nouvelle transaction. Toutes les valeurs sont calculées après validation</p>
         <div class="calculateur">
             <div>date</div>
             <div>montant</div>
@@ -63,5 +63,6 @@ if (!isset($_SESSION['user_id'])) {
     <section>
         <h2>Historique des dépenses</h2>
     </section>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
