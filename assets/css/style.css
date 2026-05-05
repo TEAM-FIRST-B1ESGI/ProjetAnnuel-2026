@@ -40,6 +40,11 @@ h3 {}
     background-color: #514BF2;
 }
 
+.btn-modifier:hover {
+    background-color: #3f38c9;
+    cursor: pointer;
+}
+
 .montant {
     display: flex;
     justify-content: space-between;
