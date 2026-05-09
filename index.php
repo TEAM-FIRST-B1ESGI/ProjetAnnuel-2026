@@ -15,13 +15,8 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <!--<link rel="stylesheet" href="assets/css/style.css">-->
-    <link rel="stylesheet" href="assets/css/style.css?php echo time(); ?>">
-=======
     <link rel="stylesheet" href="assets/css/style.css?v=<?= time(); ?>">
     
->>>>>>> ajout-revenu-bdd
     <title>Accueil</title>
 </head>
 <body>
