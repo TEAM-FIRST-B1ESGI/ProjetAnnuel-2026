@@ -114,7 +114,7 @@ $classeAlerte = "";
 // Alertes selon le solde restant
 if ($resteAVivre <= 0) {
 
-    $alerte = "⚠️ Ressource indisponible.";
+    $alerte = "⚠️ Ressource indisponible.";    
     $classeAlerte = "alerte-info";
 
 } elseif ($resteAVivre <= 20) {
@@ -162,21 +162,21 @@ $user = $stmtUser->fetch(PDO::FETCH_ASSOC);
 
 $seuilAlerte = $user['budget_perso'];
 
+
 //US8_Nouvelle information (Notifications)
 
 if ($resteAVivre <= $seuilAlerte) {
 
     $alerte2 = "⚠️ Ton budget n'est pas encore atteint.";
 
-    $classeAlerte = "alerte-prevention";
+    $classeAlerte2 = "alerte-prevention";
 
 } else {
 
     $alerte2 = "🎉 Ton budget est disponible !";
 
-    $classeAlerte = "alerte-dispo";
+    $classeAlerte2 = "alerte-dispo";
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -244,7 +244,7 @@ if ($resteAVivre <= $seuilAlerte) {
                     <input type="number" name="budget_perso" min="0" step="0.01" required>
                     <button type="submit" name="btn-montant-perso">Valider</button>
                 </form>
-                <div class="notif-budget">
+                <div class="notif-budget <?= $classeAlerte2 ?>">
                     <p><?= $alerte2 ?></p>
                 </div>
             </div>
@@ -261,22 +261,22 @@ if ($resteAVivre <= $seuilAlerte) {
         </div>
         <div class="form-depenses">
             <form class="form-inputs" method="POST">
-                <div>
-                <div class="item-form-depenses">
-                    <label>DATE :</label>
-                    <input class="input-form-depenses" type="date" name="date_depense" required>
-                </div>
-                <div class="item-form-depenses">
-                    <label>MONTANT(€) :</label>
-                    <input class="input-form-depenses" type="number" name="montant" required>
-                </div>
-                <div class="item-form-depenses">
-                    <label>CATÉGORIE :</label>
-                    <input class="input-form-depenses" type="text" name="source" required>
-                </div>
+                <div class="form-item-conteneur">
+                    <div class="item-form-depenses">
+                        <label>DATE :</label>
+                        <input class="input-form-depenses" type="date" name="date_depense" required>
+                    </div>
+                    <div class="item-form-depenses">
+                        <label>MONTANT(€) :</label>
+                        <input class="input-form-depenses" type="number" name="montant" required>
+                    </div>
+                    <div class="item-form-depenses">
+                        <label>CATÉGORIE :</label>
+                        <input class="input-form-depenses" type="text" name="source" required>
+                    </div>
+                </div>                    
                 <button class="btn-declarer" type="submit">Valider et calculer</button>                
             </form>                        
-        </div>
     </section>
 
     <!--------Bloc historique---------->

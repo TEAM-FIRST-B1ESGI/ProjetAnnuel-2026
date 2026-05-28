@@ -213,7 +213,8 @@ h4 {
 
 /*-------------------BLOC DECLARER DEPENSES---------------------------*/
 .bloc-declarer-depenses {
-    display: flex;    
+    display: flex;
+    justify-content: space-between;    
     margin: 10px;    
     padding: 20px;
     border-radius: 8px;
@@ -234,8 +235,13 @@ h4 {
     padding: 20px;
 }
 
+.form-item-conteneur {
+    display: flex;
+}
+
 .form-inputs {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     
 }
@@ -432,6 +438,11 @@ h4 {
     border-radius: 8px;
     background-color: #35328C;
     color: white;
+}
+
+.form-item-conteneur {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-inputs {
