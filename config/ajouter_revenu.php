@@ -1,40 +1,27 @@
-
 <?php
 session_start();
 require_once "database.php";
 
-$message = "";
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $montant = $_POST['montant'] ?? null;
-    $source = $_POST['source'] ?? '';
-    $date = $_POST['date_revenu'] ?? null;
     $user_id = $_SESSION['user_id'] ?? 1;
 
-    if ($montant && $source && $date) {
+    if ($montant) {
 
-        $sql = "INSERT INTO revenus (user_id, montant, date_revenu, source)
-                VALUES (:user_id, :montant, :date_revenu, :source)";
+        $sql = "INSERT INTO revenus (user_id, montant)
+                VALUES (:user_id, :montant)";
 
         $stmt = $pdo->prepare($sql);
 
         $stmt->execute([
             ':user_id' => $user_id,
             ':montant' => $montant,
-            ':date_revenu' => $date,
-            ':source' => $source
         ]);
 
-        header("Location: ajouter_revenu.php?success=1");
+        header("Location: ../index.php");
         exit();
-    } else {
-        $message = "Tous les champs sont obligatoires.";
-    }
-}
-
-if (isset($_GET['success'])) {
-    $message = "Revenu ajouté avec succès !";
+    } 
 }
 ?>
 
@@ -43,18 +30,21 @@ if (isset($_GET['success'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="assets/css/style.css">-->
-    <link rel="stylesheet" href="assets/css/style.css?php echo time(); ?>">
+    <link rel="stylesheet" href="../assets/css/style.css?php echo time(); ?>">
     <title>Accueil</title>
 </head>
 <body>
+    <!--------Bloc header---------->
+    <section class="bloc-header">
+        <div>
+            <a href="../index.php">
+            <img class="logo" src="../assets/img/logo.png">
+            </a>            
+        </div>        
+    </section>
     <form method="POST">
         <label>Montant :</label>
         <input type="number" name="montant" required>
-        <label>Source :</label>
-        <input type="text" name="source" required>
-        <label>Date :</label>
-        <input type="date" name="date_revenu" required>
         <button type="submit">Ajouter</button>
     </form>
     <script src="formulaire.js"></script>

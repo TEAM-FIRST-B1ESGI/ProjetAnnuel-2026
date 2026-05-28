@@ -5,9 +5,21 @@ body {
     background: #F2F2F2;
 }
 /*----------------TYPOGRAPHIE------------------*/
-h1 {}
-h2 {}
-h3 {}
+h1 {
+    margin:0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin:0;
+}
+
+h4 {
+    color:grey;
+}
 
 /*----------------COULEURS------------------
 #514BF2 bleu roi
@@ -17,7 +29,12 @@ h3 {}
 #CEF2DE vert pâle
 
 /*----------------BLOC HEADER---------------*/
-.header {
+
+.logo {
+    margin: 20px;
+}
+
+.bloc-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -27,15 +44,16 @@ h3 {}
     width: 200px;    
     margin: 20px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: white;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
 }
 
 .btn-modifier {    
     width: 80px;
     padding: 5px;
     border: none;    
-    border-radius: 5px;
+    border-radius: 8px;
     color: white;
     background-color: #514BF2;
 }
@@ -50,3 +68,382 @@ h3 {}
     justify-content: space-between;
     padding: 10px;
 }
+
+/*-------------------BLOC POINT DEPENSES--------------------------*/
+.bloc-point-depenses {
+    display: flex;
+    width: auto;
+    margin: 10px;
+}
+
+.bloc-conteneur {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.bloc-repartion-depenses {
+    display: flex;
+    
+}
+
+
+/*-------------------BLOC RESTE À VIVRE---------------------------*/
+.reste-a-vivre {
+    width: 50%;
+    background-color: white;
+    margin-right: 10px;
+    padding:10px 0px 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);   
+}
+
+.reste-a-vivre strong {
+    font-size: 24px;
+}
+
+/*--------------------------BLOC TOTAL----------------------------*/
+.total-depenses {
+    width: 50%;
+    background-color: white;
+    margin-left: 10px;
+    padding:10px 0px 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.total-depenses strong {
+    font-size: 24px;
+}
+
+
+/*-------------------BLOC REPARTITION-----------------------------------*/
+.statistiques {    
+    background-color: white;
+    margin-top: 20px;
+    padding:20px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);    
+}
+
+.statistiques h3 {
+    margin-bottom: 20px;
+}
+
+.barre-container {
+    margin-bottom: 10px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.barre {
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+}
+
+
+/*-------------------------BLOC NOTIFICATIONS----------------------------*/
+.bloc-notifications {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 10px 10px 10px;
+    padding:0 20px 20px 20px;
+}
+
+.bloc-notifications h3 {
+    color:grey;
+}
+
+.bloc-alerte {        
+    margin: 20px 0;
+    padding: 0px 20px;
+    border-radius: 10px;    
+    font-weight: bold;    
+}
+
+.alerte-info {
+    background-color: #a31544;
+}
+
+.alerte-prevention {
+    background-color: rgb(232, 181, 86);
+}
+
+.alerte-succes {
+    background-color: #CEF2DE;    
+}
+
+.alerte-dispo {
+    font-size: 20px;
+    animation: zoom 2s infinite alternate;
+}
+
+@keyframes zoom {
+    from {
+        font-size: 18px;
+  }
+    to {
+        font-size: 20px;
+  }
+}
+
+
+/*-------------------BLOC BUDGET PERSO--------------------------------*/
+.budget-perso {
+    padding:20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.notif-budget {
+    background-color: #3f38c9;
+    color:white;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding:20px;
+    font-size: 20px;
+}
+
+/*-------------------BLOC DECLARER DEPENSES---------------------------*/
+.bloc-declarer-depenses {
+    display: flex;    
+    margin: 10px;    
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #35328C;
+    color: white;
+}
+
+.bloc-declarer-depenses h2 {
+    color: white;
+}
+
+.declarer-infos {
+    padding: 20px;
+}
+
+.form-depenses {    
+    width: 50%;    
+    padding: 20px;
+}
+
+.form-inputs {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.input-form-depenses {
+    padding: 10px;
+    margin-top: 10px;
+    border:none;
+    border-radius: 3px;
+    background-color:#181740;
+    color:white;
+}
+
+.item-form-depenses {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.btn-declarer {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;    
+    border-radius: 8px;
+    color:#181740;
+    background-color: white;
+    
+}
+
+.btn-declarer:hover {
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+/*------------------BLOC HISTORIQUE DEPENSES----------------------*/
+.bloc-historique-depenses {
+    background-color: white;
+    margin: 10px;
+}
+
+.historique-depenses {
+    /*max-width: 500px;*/
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.historique-depenses table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.historique-depenses th,
+.historique-depenses td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.historique-depenses th {
+    background-color: #eee;
+}
+
+/*--------------PAGE INSCRIPTION---------------------*/
+
+.bloc-inscription {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-inscription {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+}
+
+.input-form-inscription {
+    width: 200px;
+    height: 25px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    color: grey;
+    border-radius: 8px;
+}
+
+.btn-form-inscription {
+    width: 80px;
+    padding: 10px;
+    border: none;    
+    border-radius: 8px;
+    color: white;
+    background-color: #514BF2;
+}
+
+.btn-form-inscription:hover {
+    background-color: #3f3ac4;
+    cursor: pointer;
+}
+
+/*--------------PAGE CONNECTION---------------------*/
+
+.bloc-login {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+}
+
+.input-form-login {
+    width: 200px;
+    height: 25px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    color: grey;
+    border-radius: 8px;
+}
+
+.btn-form-login {
+    width: 80px;
+    padding: 10px;
+    border: none;    
+    border-radius: 8px;
+    color: white;
+    background-color: #514BF2;
+}
+
+.btn-form-login:hover {
+    background-color: #2f2d82;
+}
+
+/*---------------MEDIA QUERIES-----------------------*/
+
+@media screen and (max-width: 768px) {
+
+/*--------------PAGE INSCRIPTION et LOGIN---------------------*/
+
+
+
+/*-------------PAGE ACCUEIL------------------------------*/
+
+.bloc-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.bloc-point-depenses {
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    margin: 10px;
+}
+
+.bloc-conteneur {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bloc-notifications {
+    width: auto;
+    margin: 10px;
+    padding:0px;
+    margin:20px 0px;
+}
+
+.budget-perso {
+    width: auto;
+    padding:20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.bloc-declarer-depenses {
+    display: flex;
+    flex-direction: column;   
+    margin: 10px;    
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #35328C;
+    color: white;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.form-depenses {  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+}
+
